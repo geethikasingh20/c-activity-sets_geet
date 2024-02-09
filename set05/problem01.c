@@ -7,7 +7,6 @@ struct Point{
 };
 
 struct Point fetchPointCoordinates(){
-
     float x,y;
     struct Point p;
 
