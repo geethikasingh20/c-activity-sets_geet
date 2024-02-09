@@ -2,7 +2,6 @@
 #include <math.h>
 
 struct Point{
-
     float x;
     float y;
 };
