@@ -49,7 +49,7 @@ void displayCamelWeight(float weight){
         printf("\n weight calculated as  %f kg", weight);
 }
 
-void main()
+int main()
 {
     //what is the unit of measurement
     //output in kg?
@@ -63,4 +63,5 @@ void main()
     
     displayCamelWeight(weight);
 
+    return 0;
 }
