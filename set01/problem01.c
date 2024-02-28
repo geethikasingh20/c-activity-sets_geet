@@ -32,7 +32,7 @@ char * readName(){
         }
     else 
         {
-        // printf("not a number");
+            printf("Please enter a valid number");
             exit(1);
         }
 
