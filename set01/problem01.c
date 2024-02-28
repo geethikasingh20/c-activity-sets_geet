@@ -2,7 +2,35 @@
 #include <stdio.h>
 #include<stdlib.h>
 
-/* method to check if the entered length is non zero and not -ve ; can be added for valid digits also*/
+
+//For students
+//version 1
+/*int main()
+{ 
+char name[20];
+printf("Enter your name");
+scanf("%s",&name);
+printf("Entered name is %s",name);
+return 0;
+}
+*/
+
+/*
+//version 2 : version 1 does not consider the input with spaces and truncates further part
+int main()
+{ 
+char name[20];
+printf("Enter your name");
+gets(name);
+printf("Entered name is %s\n",name);
+return 0;
+}
+*/
+
+//version 3 : version 2 has fixed number of characters for input, add validation
+//if input is a number or not
+
+// method to check if the entered length is non zero and not -ve ; can be added for valid digits also
 void validateMetric(int unit){
 
     if(unit==0 || unit<0) 
