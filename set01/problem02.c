@@ -4,6 +4,25 @@
 //#include <stdarg.h>
 
 
+//simpler version for students to start with
+int main()
+{
+    
+float num1,num2,result;
+printf("Enter the first number to be added");
+scanf("%f",&num1);
+
+printf("Enter the second number to be added");
+scanf("%f",&num2);
+
+result = num1+num2;
+printf("The result after addition is %f",result);
+
+return 0;
+}
+
+//Below snippet is improved version and has some validations
+/*
 //function to read numbers
 void readNumbers(float *num1,float *num2){
     printf("Enter the first number to be added");
@@ -25,7 +44,15 @@ float addNumbers(float num1,float num2){
     return num1+num2;   
 }
 
-/*
+
+
+//function to display the result
+void displayResult(float result)
+{
+    printf("The result is %f\n",result);
+}
+
+
 //function to add varying number of inputs
 float addVarNumbers(int num,...){
     printf("inside var fn");
@@ -45,13 +72,6 @@ float addVarNumbers(int num,...){
     va_end(args);
 
 }
-*/
-
-//function to display the result
-void displayResult(float result)
-{
-    printf("The result is %f\n",result);
-}
 
 int main()
 { 
@@ -63,3 +83,4 @@ displayResult(addNumbers(num1,num2));
 
 return 0;
 }
+*/
