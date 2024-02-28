@@ -4,7 +4,6 @@
 
 /* method to check if the entered length is non zero and not -ve ; can be added for valid digits also*/
 void validateMetric(int unit){
-    printf("\nInside validateMetric fn : unit **** :  %d",unit);
 
     if(unit==0 || unit<0) 
     {
@@ -15,20 +14,21 @@ void validateMetric(int unit){
 
 //method to display the name
 void displayName(char * nameptr){
-    printf("inside display fn : you entered **** :  %s",nameptr);
+    printf("The name entered is :  %s",nameptr);
 
     //free the memory allocated
     free(nameptr);
 }
 
 //method to read name
-char * readName(int * length){
+char * readName(){
     char* nameptr;
+    int length;
     printf("Enter the length of your name");
-    if(scanf("%d",length))
+    if(scanf("%d",&length))
         {
             //printf("it is a number");
-            validateMetric((*length));
+            validateMetric(length);
         }
     else 
         {
@@ -37,7 +37,7 @@ char * readName(int * length){
         }
 
 
-    nameptr=(char*) malloc((*length) * sizeof(char));
+    nameptr=(char*) malloc(length * sizeof(char));
 
     if(nameptr==NULL){
         printf("Could not allocate memory!");
@@ -47,7 +47,6 @@ char * readName(int * length){
         while ((getchar()) != '\n');
         printf("Enter name: ");
         gets(nameptr);    
-    // free(nameptr);
         return nameptr;
     }
 }
@@ -56,9 +55,8 @@ int main()
 {
  
 char * nameptr;
-int length;
 
-nameptr=readName(&length);
+nameptr=readName();
 displayName(nameptr);
 
 return 0;
